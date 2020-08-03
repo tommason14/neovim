@@ -1,3 +1,8 @@
+Fork of Neovim that doesn't read the background colour of the terminal. These
+were getting read in and were treat as user input, resulting in text being
+replaced and often leaving the cursor in command mode immediately after opening
+a file.
+
 [![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)](https://neovim.io)
 
 [Documentation](https://neovim.io/doc) |

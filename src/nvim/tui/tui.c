@@ -308,8 +308,10 @@ static void terminfo_start(UI *ui)
   unibi_out(ui, unibi_keypad_xmit);
   unibi_out(ui, unibi_clear_screen);
   // Ask the terminal to send us the background color.
-  data->input.waiting_for_bg_response = 5;
-  unibi_out_ext(ui, data->unibi_ext.get_bg);
+  // Tom- commented out next two lines
+  // https://github.com/neovim/neovim/issues/9991
+  // data->input.waiting_for_bg_response = 5;
+  // unibi_out_ext(ui, data->unibi_ext.get_bg);
   // Enable bracketed paste
   unibi_out_ext(ui, data->unibi_ext.enable_bracketed_paste);
 
